@@ -1,0 +1,9 @@
+services:
+  e2e:
+    build: .
+    image: wikipedia-e2e
+    env_file: .env
+    ipc: host
+    volumes:
+      - ./playwright-report:/app/playwright-report
+      - ./test-results:/app/test-results
